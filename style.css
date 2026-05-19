@@ -1,0 +1,379 @@
+
+
+/* ===== FONDO MÁGICO ===== */
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    overflow-x:hidden;
+    color:#5a3d3d;
+ background: linear-gradient(-45deg,
+        #FFF8F5,
+        #FBE3DA,
+        #F6D1C1,
+        #F7C9B8
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 14s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+
+/* ===== LUCIÉRNAGAS (VERSIÓN SEGURA) ===== */
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999; /* 🔥 ARRIBA DE TODO */
+}
+
+.star{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:#fff7c2;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 8px rgba(255, 220, 120, 0.8),
+        0 0 16px rgba(255, 200, 80, 0.5);
+
+    opacity:1; /* 🔥 IMPORTANTE */
+
+    animation: floatStar linear infinite;
+}
+
+/* movimiento */
+@keyframes floatStar{
+    0%{
+        transform: translateY(110vh);
+    }
+    100%{
+        transform: translateY(-120vh);
+    }
+}
+
+/* ===== GENERAL ===== */
+section{
+    padding:90px 20px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+   
+}
+
+h1,h2{
+    font-family:'Great Vibes', cursive;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color: 	#3A2A2A;
+ text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+ background-image: url("im.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.hero h1{
+     
+    font-size:90px;
+}
+
+.hero p{
+    font-size:40px;
+}
+
+/* ===== GALERÍA ===== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:50px;
+    padding:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+
+    border-radius:28px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12),
+        0 0 20px rgba(217,140,140,.15);
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease,
+        filter .5s ease;
+
+    cursor:pointer;
+
+  
+}
+
+.gallery img:hover{
+    transform:
+        scale(1.06)
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.18),
+        0 0 30px rgba(216,180,106,.35);
+
+    filter:brightness(1.05);
+    
+}
+
+
+
+/* ===== FRASE ===== */
+.frase{
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+    text-align:center;
+letter-spacing:1px;
+font-style:italic;
+   color: 	#3A2A2A;
+ text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+
+    background-image: url(castillo.jpeg);
+    padding:45px;
+    border-radius:30px;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+        0 8px 32px rgba(217,140,140,.25),
+        0 0 25px rgba(255,255,255,.2);
+
+    position:relative;
+    overflow:hidden;
+
+    animation: floatCard 5s ease-in-out infinite;
+}
+.simbolo{
+    color:#D8B46A;
+    font-size:28px;
+    text-shadow:0 0 10px rgba(216,180,106,.5);
+}
+@keyframes floatCard{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ===== FAMILIA ===== */
+.family{
+    max-width:800px;
+    margin:60px auto;
+
+    padding:45px;
+
+    text-align:center;
+     color: 	#3A2A2A;
+ text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+ background-image: url(castillo.jpeg);
+   
+
+    font-size:20px;
+    line-height:2.2;
+
+   
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.10),
+        0 0 20px rgba(216,180,106,.12);
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:floatFamily 6s ease-in-out infinite;
+}
+
+
+@keyframes floatFamily{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+.family strong{
+    display:block;
+
+    font-size:28px;
+
+    color:	 #3A2A2A;
+     text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+    
+
+    margin-top:10px;
+
+    letter-spacing:1px;
+
+    text-shadow:0 0 10px rgba(217,140,140,.25);
+}
+.family::before,
+.family::after{
+    content:"✦ ✨ ✦";
+
+    display:block;
+
+    font-size:26px;
+
+    color:#D8B46A;
+
+    margin:15px 0;
+
+    letter-spacing:8px;
+
+    text-shadow:0 0 12px rgba(216,180,106,.35);
+}
+
+
+
+
+/* ===== BOTONES ===== */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#D8B46A;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#c79d4f;
+}
+
+/* ===== UBICACIONES ===== */
+.locations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:rgba(255,255,255,.7);
+    padding:20px;
+    border-radius:25px;
+    backdrop-filter:blur(6px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+    max-width:700px;
+    margin:60px auto;
+    padding:40px;
+
+    text-align:center;
+
+         color: 	#3A2A2A;
+ text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+ background-image: url(castillo.jpeg);
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12),
+        0 0 25px rgba(216,180,106,.15);
+
+    position:relative;
+
+    overflow:hidden;
+
+    font-size:20px;
+    line-height:1.8;
+
+    color:#5a3d3d;
+
+    animation:floatWhatsapp 6s ease-in-out infinite;
+}
+@keyframes floatWhatsapp{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-6px); }
+    100%{ transform:translateY(0px); }
+}
+
+/* ===== FINAL ===== */
+.final{
+    font-size:32px;
+    font-family:'Great Vibes', cursive;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    padding:25px;
+    text-align:center;
+    background:rgba(255,255,255,.2);
+}
+
+
