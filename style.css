@@ -162,7 +162,7 @@ font-style:italic;
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
 
-    background-image: url(castillo.jpeg);
+     background:rgba(255,255,255,.40);
     padding:45px;
     border-radius:30px;
 
@@ -208,7 +208,7 @@ font-style:italic;
  text-shadow:
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
- background-image: url(castillo.jpeg);
+  background:rgba(255,255,255,.40);
    
 
     font-size:20px;
@@ -335,7 +335,7 @@ font-style:italic;
  text-shadow:
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
- background-image: url(castillo.jpeg);
+ background:rgba(255,255,255,.40);
     backdrop-filter:blur(12px);
 
     border-radius:30px;
