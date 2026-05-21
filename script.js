@@ -13,29 +13,25 @@ for(let i=0;i<160;i++){
 
     stars.appendChild(s);
 }
-const audio = document.getElementById("musica");
 
-// Intento de autoplay
-window.addEventListener("load", async () => {
-    try {
-        await audio.play();
-        console.log("Música iniciada automáticamente");
-    } catch (err) {
-        console.log("Autoplay bloqueado");
+const music = document.getElementById("bg-music");
+
+window.addEventListener("load", () => {
+
+    const playPromise = music.play();
+
+    if(playPromise !== undefined){
+        playPromise.catch(() => {
+            console.log("Autoplay bloqueado");
+        });
     }
+
 });
 
-// Si el navegador bloquea autoplay,
-// se inicia al primer toque/click
-function iniciarMusica() {
-    audio.play();
 
-    document.removeEventListener("click", iniciarMusica);
-    document.removeEventListener("touchstart", iniciarMusica);
-}
-
-document.addEventListener("click", iniciarMusica);
-document.addEventListener("touchstart", iniciarMusica);
+document.body.addEventListener("click", () => {
+    music.play();
+}, { once:true });
 
 
 
