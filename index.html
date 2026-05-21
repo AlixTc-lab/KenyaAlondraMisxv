@@ -7,7 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,8 +15,8 @@
 
 <!-- MÚSICA -->
 
-<audio autoplay loop hidden>
-  <source src="amor.mp3" type="audio/mpeg">
+<audio id="musica" loop playsinline>
+    <source src="amor.mp3" type="audio/mpeg">
 </audio>
 
 <!-- DESTELLOS -->
@@ -32,16 +32,17 @@
 <section>
    
     <div class="gallery">
-        <img src="foto1.jpeg">
-        <img src="foto2.jpeg">
-        <img src="foto3.jpeg">
-        <img src="foto4.jpeg">
+        <img src="foto1.png">
+        <img src="foto2.png">
+        <img src="foto3.png">
+        <img src="foto4.png">
     </div>
 </section>
 
 <!-- FRASE -->
 <section>
     <div class="frase">
+         <div class="fondo">
         <p class="simbolo">✦ ♡ ✦</p>
        <p> Mi vida ha sido como un libro, cada año es un capítulo que con esfuerzo y dedicación he escrito.  
         </p> <br>
@@ -49,6 +50,8 @@
         <br>
         <p>Te invito a compartir este día tan especial. </p>
         <p class="simbolo">✦ ♡ ✦</p>
+
+        </div>
     </div>
 </section>
 
@@ -57,10 +60,13 @@
     <h2 style="font-size:60px;">Con la bendición de Dios y mi Familia</h2>
 
     <div class="family">
-        <p><strong>Mamá:</strong> ✦Ana Laura Arevalo Govea</p>
-        <p><strong>Padrinos:</strong><br>
-        ✦Laura Gloria Romero Rivera<br>
+         <div class="fondo">
+        <h3><strong>Mamá:</strong></h3>
+            <p>✦Ana Laura Arevalo Govea</p>
+        <h3><strong>Padrinos:</strong></h3><br>
+        <p>✦Laura Gloria Romero Rivera<br>
         ✦Javier Govea Rodriguez</p>
+    </div>
     </div>
 </section>
 
@@ -73,8 +79,9 @@
         <div class="card">
             <img src="parroquia.png">
             <h3>Misa</h3>
+            <h3>6:00 pm</h3>
             <p>Parroquia de Santa Maria de Guadalupe Madre de la Confianza</p>
-
+            <p>And. Sacerdotes Manzana 001, Cd Azteca 3ra Secc, 55120 Ecatepec de Morelos, Méx.</p>
             <a class="btn" target="_blank"
             href="https://www.google.com/maps/place/Parroquia+de+Santa+Maria+de+Guadalupe+Madre+de+la+Confianza/@19.5318868,-99.0188232,17z/data=!4m6!3m5!1s0x85d1faa98cf55ad9:0xfec3ccaab566549f!8m2!3d19.5318868!4d-99.0188232!16s%2Fg%2F11bv6plhm8?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D">
             Ver ubicación
@@ -84,10 +91,12 @@
         <div class="card">
             <img src="salom.png">
             <h3>Recepción</h3>
+            <h3>7:00 pm</h3>
             <p>Salón "Dessire Eventos"</p>
+            <p>Blvd. Quetzalcoatl 256, La Florida Cd Azteca, 55129 Ecatepec de Morelos, Méx.</p>
 
             <a class="btn" target="_blank"
-            href="https://www.google.com/maps/place/Sal%C3%B3n+de+Fiestas+%22Dessire+Eventos%22/@19.5449553,-99.0178887,17z">
+            href="https://maps.app.goo.gl/mQecZeEWxJ59p1R4A">
             Ver ubicación
             </a>
         </div>
@@ -98,9 +107,11 @@
 <!-- WHATSAPP -->
 <section class="whatsapp">
     <h2 style="font-size:60px;">Confirmación</h2>
-
+<div class="timer">
+    <div>
     <p>Tu presencia es muy importante ✨</p>
-
+    </div>
+</div>
     <a class="btn"
     href="https://wa.me/5210000000000?text=Confirmo%20mi%20asistencia"
     target="_blank">
@@ -114,6 +125,38 @@
         Te esperamos para vivir una noche mágica ✨
     </div>
 </section>
+
+<section class="countdown">
+    
+    <h2> ✦ ♡ ✦Faltan✦ ♡ ✦ </h2>
+
+    <div class="timer">
+
+        <div>
+            <span id="days">00</span>
+            <p>Días</p>
+        </div>
+
+        <div>
+            <span id="hours">00</span>
+            <p>Horas</p>
+        </div>
+
+        <div>
+            <span id="minutes">00</span>
+            <p>Minutos</p>
+        </div>
+
+        <div>
+            <span id="seconds">00</span>
+            <p>Segundos</p>
+        </div>
+
+    </div>
+
+</section>
+
+
 
 <!-- FOOTER -->
 <footer>

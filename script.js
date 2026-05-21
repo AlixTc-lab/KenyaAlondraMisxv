@@ -1,6 +1,4 @@
 
-
-
 const stars = document.querySelector('.stars');
 
 for(let i=0;i<160;i++){
@@ -15,3 +13,59 @@ for(let i=0;i<160;i++){
 
     stars.appendChild(s);
 }
+
+const audio = document.getElementById("musica");
+
+function iniciarMusica() {
+    audio.play();
+
+    document.removeEventListener("click", iniciarMusica);
+    document.removeEventListener("touchstart", iniciarMusica);
+}
+
+document.addEventListener("click", iniciarMusica);
+document.addEventListener("touchstart", iniciarMusica);
+
+
+
+
+const eventDate = new Date("July 18, 2026 18:00:00").getTime();
+
+const timer = setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if(distance < 0){
+
+        clearInterval(timer);
+
+        document.querySelector(".timer").innerHTML =
+            "✨ El gran día ha llegado ✨";
+    }
+
+},1000);
+

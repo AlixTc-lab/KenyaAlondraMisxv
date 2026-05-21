@@ -99,6 +99,7 @@ h1,h2{
 
 .hero p{
     font-size:40px;
+     font-family:'Great Vibes', cursive;
 }
 
 /* ===== GALERÍA ===== */
@@ -152,17 +153,17 @@ h1,h2{
 .frase{
     max-width:900px;
     margin:auto;
-    font-size:22px;
+    font-size:35px;
     line-height:1.8;
     text-align:center;
 letter-spacing:1px;
-font-style:italic;
+font-family:'Great Vibes', cursive;
    color: 	#3A2A2A;
  text-shadow:
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
 
-     background:rgba(255,255,255,.40);
+     background-image: url(castillo.jpeg);
     padding:45px;
     border-radius:30px;
 
@@ -183,6 +184,19 @@ font-style:italic;
     color:#D8B46A;
     font-size:28px;
     text-shadow:0 0 10px rgba(216,180,106,.5);
+}
+.fondo{
+    background:rgba(255,255,255,.45);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    min-width:130px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    animation:floatTimer 4s ease-in-out infinite;
 }
 @keyframes floatCard{
     0%{
@@ -208,7 +222,7 @@ font-style:italic;
  text-shadow:
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
-  background:rgba(255,255,255,.40);
+  background-image: url(castillo.jpeg);
    
 
     font-size:20px;
@@ -231,6 +245,10 @@ font-style:italic;
     overflow:hidden;
 
     animation:floatFamily 6s ease-in-out infinite;
+}
+.family p{
+    font-family:'Great Vibes', cursive;
+      font-size: 35px;
 }
 
 
@@ -335,7 +353,7 @@ font-style:italic;
  text-shadow:
     0 0 10px rgba(255,255,255,.4),
     0 0 20px rgba(255,208,0,.5);
- background:rgba(255,255,255,.40);
+ background-image: url(castillo.jpeg);
     backdrop-filter:blur(12px);
 
     border-radius:30px;
@@ -365,7 +383,7 @@ font-style:italic;
 
 /* ===== FINAL ===== */
 .final{
-    font-size:32px;
+    font-size:40px;
     font-family:'Great Vibes', cursive;
 }
 
@@ -377,3 +395,61 @@ footer{
 }
 
 
+/*===== Sección de cuenta regresiva=====*/
+
+.countdown{
+    text-align:center;
+    margin:80px auto;
+    padding:40px;
+
+    background-image: url(castillo.jpeg);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    max-width:900px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12),
+        0 0 20px rgba(216,180,106,.18);
+}
+.countdown h2{
+    font-size:40px;
+    color:#3A2A2A;
+    margin-bottom:30px;
+}
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+.timer div{
+    background:rgba(255,255,255,.45);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    min-width:130px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    animation:floatTimer 4s ease-in-out infinite;
+}
+.timer span{
+    display:block;
+
+    font-size:50px;
+    font-weight:bold;
+
+    color:#3A2A2A;
+
+    text-shadow:0 0 10px rgba(216,180,106,.3);
+}
+.timer p{
+    margin-top:10px;
+    font-size:18px;
+    color:#6b4b4b;
+}
