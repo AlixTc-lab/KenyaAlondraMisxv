@@ -13,9 +13,20 @@ for(let i=0;i<160;i++){
 
     stars.appendChild(s);
 }
-
 const audio = document.getElementById("musica");
 
+// Intento de autoplay
+window.addEventListener("load", async () => {
+    try {
+        await audio.play();
+        console.log("Música iniciada automáticamente");
+    } catch (err) {
+        console.log("Autoplay bloqueado");
+    }
+});
+
+// Si el navegador bloquea autoplay,
+// se inicia al primer toque/click
 function iniciarMusica() {
     audio.play();
 

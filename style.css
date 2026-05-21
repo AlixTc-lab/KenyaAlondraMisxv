@@ -2,25 +2,28 @@
 
 /* ===== FONDO MÁGICO ===== */
 body{
+  
+
     margin:0;
     font-family:'Poppins', sans-serif;
     overflow-x:hidden;
-    color:#5a3d3d;
- background: linear-gradient(-45deg,
-        #FFF8F5,
-        #FBE3DA,
-        #F6D1C1,
-        #F7C9B8
-    );
-    background-size: 400% 400%;
-    animation: gradientBG 14s ease infinite;
+    color:#6b4b4b;
+
+    background-image: url(f.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: cover;
+  
+
+    position: relative;
 }
 
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
+
+
+
+
 
 
 
@@ -284,7 +287,7 @@ font-family:'Great Vibes', cursive;
 }
 .family::before,
 .family::after{
-    content:"✦ ✨ ✦";
+   
 
     display:block;
 
