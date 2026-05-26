@@ -378,6 +378,8 @@ font-family:'Great Vibes', cursive;
 
     animation:floatWhatsapp 6s ease-in-out infinite;
 }
+
+
 @keyframes floatWhatsapp{
     0%{ transform:translateY(0px); }
     50%{ transform:translateY(-6px); }
